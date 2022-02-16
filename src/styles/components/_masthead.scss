@@ -1,0 +1,98 @@
+.app-masthead {
+  color: govuk-colour("white");
+  background-color: $batik-brand-colour;
+  padding: govuk-spacing(5) 0;
+  padding-bottom: 0;
+
+  @include govuk-media-query($from: desktop) {
+    padding-bottom: govuk-spacing(7);
+  }
+}
+
+.app-masthead--home {
+  @include govuk-media-query($from: desktop) {
+    padding-bottom: calc(govuk-spacing(9) + govuk-spacing(5));
+  }
+}
+
+.app-masthead__container--home {
+  @include govuk-media-query($from: desktop) {
+    display: grid;
+    grid-gap: govuk-spacing(8);
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.app-masthead__title {
+  color: govuk-colour("white");
+
+  @include govuk-media-query($from: desktop) {
+    @include app-font(80, $font-family: $app-header-font-family);
+  }
+}
+
+.app-masthead__text {
+  color: govuk-colour("white");
+}
+
+.app-masthead__language-selector-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: govuk-spacing(4);
+  display: flex;
+  transform: translateX(govuk-spacing(-2));
+  @include govuk-font(19);
+}
+
+.app-masthead__language-selector-list-item {
+  padding: 0 govuk-spacing(2);
+}
+
+.app-masthead__language-selector-list-item--current {
+  @include govuk-typography-weight-bold;
+}
+
+.app-masthead__content--home {
+  @include govuk-media-query($from: desktop) {
+    padding-top: govuk-spacing(8);
+  }
+}
+
+.app-masthead__image-container {
+  min-height: 250px;
+  height: 100%;
+  background-size: cover;
+  background-image: url('/assets/images/masthead-main-img.jpg');
+  margin-right: -$govuk-gutter-half;
+  margin-left: -$govuk-gutter-half;
+
+  @include govuk-media-query($from: tablet) {
+    min-height: 400px;
+    margin-right: -$govuk-gutter;
+    margin-left: -$govuk-gutter;
+  }
+
+  @include govuk-media-query($from: desktop) {
+    border-radius: 250px 0 250px 0;
+    box-shadow: govuk-spacing(4) govuk-spacing(4) 0px 5px govuk-shade($batik-brand-colour, 20%);
+    margin-left: auto;
+    width: 100%;
+    max-width: 600px;
+    min-height: 500px;
+  }
+}
+
+.app-masthead__summary {
+  padding: govuk-spacing(8) 0;
+  background-color: $batik-muted-colour;
+  margin-bottom: govuk-spacing(6);
+}
+
+.app-masthead .app-masthead__tabs:last-child {
+  transform: translateY(govuk-spacing(7));
+}
+
+.app-masthead .govuk-caption-l {
+  color: govuk-colour("white");
+}

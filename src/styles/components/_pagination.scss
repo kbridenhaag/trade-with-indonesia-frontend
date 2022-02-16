@@ -1,0 +1,32 @@
+.app-pagination__button {
+  @include govuk-font(19);
+  background: none;
+  border: none;
+  color: $govuk-link-colour;
+  text-align: left;
+  padding: govuk-spacing(3) 0;
+  display: block;
+  width: 100%;
+
+  &:hover {
+    cursor: pointer;
+    color: $govuk-link-hover-colour;
+    background-color: govuk-colour("light-grey");
+  }
+
+  &:focus {
+    @include govuk-focused-text;
+  }
+}
+
+.app-pagination__button-action {
+  display: block;
+}
+
+.app-pagination__button-meta {
+  text-decoration: underline;
+}
+
+.app-pagination__button + .app-pagination__button {
+  border-top: 1px solid $govuk-border-colour;
+}

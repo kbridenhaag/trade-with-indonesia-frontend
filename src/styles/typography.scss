@@ -1,0 +1,101 @@
+@mixin app-font($size, $weight: regular, $font-family: $govuk-font-family, $line-height: false) {
+  @include govuk-typography-common($font-family);
+
+  @if $weight == regular {
+    @include govuk-typography-weight-regular;
+  } @else if $weight == bold {
+    @include govuk-typography-weight-bold;
+  }
+
+  @if $size {
+    @include govuk-typography-responsive($size, $override-line-height: $line-height);
+  }
+}
+
+%app-heading-xl {
+  @include govuk-text-colour;
+  @include app-font($size: 48, $weight: bold, $font-family: $app-header-font-family);
+
+  display: block;
+
+  margin-top: 0;
+  @include govuk-responsive-margin(8, "bottom");
+}
+
+.app-heading-xl {
+  @extend %app-heading-xl;
+}
+
+%app-heading-l {
+  @include govuk-text-colour;
+  @include app-font($size: 36, $weight: bold, $font-family: $app-header-font-family);
+
+  display: block;
+
+  margin-top: 0;
+  @include govuk-responsive-margin(6, "bottom");
+}
+
+.app-heading-l {
+  @extend %app-heading-l;
+}
+
+%app-heading-m {
+  @include govuk-text-colour;
+  @include app-font($size: 24, $weight: bold, $font-family: $app-header-font-family);
+
+  display: block;
+
+  margin-top: 0;
+  @include govuk-responsive-margin(4, "bottom");
+}
+
+.app-heading-m {
+  @extend %app-heading-m;
+}
+
+%app-heading-s {
+  @include govuk-text-colour;
+  @include app-font($size: 19, $weight: bold, $font-family: $app-header-font-family);
+
+  display: block;
+
+  margin-top: 0;
+  @include govuk-responsive-margin(4, "bottom");
+}
+
+.app-heading-s {
+  @extend %app-heading-s;
+}
+
+// Captions to be used inside headings
+
+// Contextual adjustments
+// Add top padding to headings that appear directly after paragraphs.
+
+%govuk-body-l  + %app-heading-l {
+  padding-top: govuk-spacing(1);
+
+  @include govuk-media-query($from: tablet) {
+    padding-top: govuk-spacing(2);
+  }
+}
+
+%govuk-body-m  + %app-heading-l,
+%govuk-body-s  + %app-heading-l,
+%govuk-list + %app-heading-l {
+  @include govuk-responsive-padding(4, "top");
+}
+
+%govuk-body-m + %app-heading-m,
+%govuk-body-s + %app-heading-m,
+%govuk-list + %app-heading-m,
+%govuk-body-m + %app-heading-s,
+%govuk-body-s + %app-heading-s,
+%govuk-list + %app-heading-s {
+  padding-top: govuk-spacing(1);
+
+  @include govuk-media-query($from: tablet) {
+    padding-top: govuk-spacing(2);
+  }
+}

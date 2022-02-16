@@ -1,0 +1,42 @@
+.app-profile__avatar-container {
+  width: 180px;
+  height: 180px;
+  position: relative;
+  display: block;
+  background-color: govuk-colour("light-grey");
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.app-profile__avatar-container--large {
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.app-profile__avatar {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  height: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.app-profile__avater-no-image-available {
+  color: govuk-colour("dark-grey");
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.app-profile__preview {
+  flex: 1 0 0;
+}

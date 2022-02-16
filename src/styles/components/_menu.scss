@@ -1,0 +1,8 @@
+.app-menu__link {
+  @include govuk-link-style-no-visited-state;
+  @include govuk-link-style-no-underline;
+}
+
+.app-menu__link[aria-current="page"] {
+  @include govuk-typography-weight-bold;
+}

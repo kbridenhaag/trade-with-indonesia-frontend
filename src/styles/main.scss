@@ -1,0 +1,67 @@
+@at-root {
+  @font-face {
+    font-family: "Plus Jakarta Sans";
+    font-style: normal;
+    font-weight: normal;
+    src:
+      url("/assets/fonts/PlusJakartaSans-Medium.woff2") format("woff2"),
+      url("/assets/fonts/PlusJakartaSans-Medium.woff") format("woff");
+    font-display: fallback;
+  }
+
+  @font-face {
+    font-family: "Plus Jakarta Sans";
+    font-style: normal;
+    font-weight: bold;
+    src:
+      url("/assets/fonts/PlusJakartaSans-ExtraBold.woff2") format("woff2"),
+      url("/assets/fonts/PlusJakartaSans-ExtraBold.woff2") format("woff");
+    font-display: fallback;
+  }
+
+  @font-face {
+    font-family: "Erode";
+    font-style: normal;
+    font-weight: bold;
+    src:
+      url("/assets/fonts/Erode-Bold.woff2") format("woff2"),
+      url("/assets/fonts/Erode-Bold.woff") format("woff");
+    font-display: fallback;
+  }
+}
+
+$govuk-global-styles: true;
+$govuk-assets-path: "/public/assets/";
+$govuk-font-family: "Plus Jakarta Sans", arial, sans-serif;
+$app-header-font-family: "Erode", serif;
+$govuk-page-width: 1600px;
+$batik-brand-colour: #1F77D1;
+$batik-muted-colour: #F8F6E9;
+$govuk-link-colour: $batik-brand-colour;
+$govuk-link-hover-colour: #144D86;
+
+$govuk-breakpoints: (
+  mobile:  320px,
+  tablet:  641px,
+  desktop: 1200px
+);
+
+@import "~govuk-frontend/govuk/base";
+@import "~govuk-frontend/govuk/core/all";
+@import "~govuk-frontend/govuk/objects/all";
+@import "~govuk-frontend/govuk/utilities/all";
+@import "~govuk-frontend/govuk/overrides/all";
+@import "helpers";
+@import "typography";
+
+html {
+  @extend .govuk-template;
+}
+
+body {
+  @extend .govuk-template__body;
+}
+
+
+
+@import "components/all";

@@ -1,0 +1,43 @@
+@mixin app-link-box {
+  position: relative;
+
+  a:after,
+  button:after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    content: '';
+  }
+}
+
+.app-\!-centre {
+  margin: 0 auto;
+}
+
+.app-\!-right {
+  margin-left: auto;
+}
+
+.app-\!-right--from-desktop {
+  @include govuk-media-query($from: desktop) {
+    margin-left: auto;
+  }
+}
+
+.app-\!-bg-muted {
+  background-color: $batik-muted-colour;
+}
+
+.app-\!-grey {
+  color: govuk-colour("dark-grey");
+}
+
+.app-\!-flex {
+  display: flex;
+}
+
+.app-\!-block {
+  display: block !important;
+}

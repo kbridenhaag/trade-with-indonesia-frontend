@@ -1,0 +1,12 @@
+.app-warning {
+  margin-bottom: govuk-spacing(6);
+  padding: govuk-spacing(4);
+  @include govuk-font(19, $weight: bold);
+  border-width: govuk-spacing(1);
+}
+
+.app-warning--error {
+  border: govuk-spacing(1) solid $govuk-error-colour;
+}
+
+

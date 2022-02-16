@@ -1,0 +1,12 @@
+.app-auth-banner {
+  background-color: govuk-colour("black");
+  color: govuk-colour("white");
+  padding: govuk-spacing(2) 0;
+}
+
+.app-auth-banner__text {
+  @include govuk-font(19);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}

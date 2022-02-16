@@ -1,0 +1,16 @@
+.app-button--inverted {
+  background-color: govuk-colour("white");
+  color: $batik-brand-colour;
+
+  &:link {
+    color: $batik-brand-colour;
+  }
+
+  &:visited {
+    color: $batik-brand-colour;
+  }
+
+  &:hover {
+    background-color: govuk-shade(govuk-colour("white"), 10%);
+  }
+}

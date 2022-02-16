@@ -1,0 +1,20 @@
+.app-analytics {
+  @include govuk-typography-common;
+  color: $govuk-brand-colour;
+}
+
+.app-analytics__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.app-analytics__heading {
+  @include govuk-font(24, bold);
+  margin-top: govuk-spacing(1);
+  order: 2;
+}
+
+.app-analytics__statistic {
+  @include govuk-font(48, bold);
+  margin-right: govuk-spacing(2);
+}
