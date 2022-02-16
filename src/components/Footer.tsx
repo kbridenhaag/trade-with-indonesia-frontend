@@ -20,7 +20,7 @@ export const Footer = () => {
               </div>
 
               <span className="app-footer__logotype">
-                <span className="govuk-!-font-weight-bold">
+                <span className="kbridh-!-font-weight-bold">
                   The Embassy of
                   <br aria-hidden="true" />
                   the Republic of Indonesia
@@ -31,7 +31,7 @@ export const Footer = () => {
             </div>
           </GridColumn>
           <GridColumn width="two-thirds" fromDesktop>
-            <div className="govuk-grid-column-two-thirds-from-desktop">
+            <div className="kbridh-grid-column-two-thirds-from-desktop">
               <a
                 rel="license"
                 href="http://creativecommons.org/licenses/by/4.0/"
