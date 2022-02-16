@@ -1,18 +1,29 @@
 .app-profile__avatar-container {
-  width: 180px;
-  height: 180px;
   position: relative;
   display: block;
   background-color: govuk-colour("light-grey");
   overflow: hidden;
   text-decoration: none;
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+
+  @include govuk-media-query($from: desktop) {
+    width: 180px;
+    height: 180px;
+  }
 }
 
 .app-profile__avatar-container--large {
-  width: 230px;
-  height: 230px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   margin: 0 auto;
+
+  @include govuk-media-query($from: desktop) {
+    width: 230px;
+    height: 230px;
+  }
 }
 
 .app-profile__avatar {

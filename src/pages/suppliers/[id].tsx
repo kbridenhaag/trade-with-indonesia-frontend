@@ -124,7 +124,11 @@ const SupplierProfilePage: NextPage<SupplierProfilePageProps> = (
               >
                 Description
               </Text>
-              <Text>
+              <Text
+                style={{
+                  wordBreak: 'break-word'
+                }}
+              >
                 {supplier.description
                   ? supplier.description
                   : 'This supplier did not provide a description.'}

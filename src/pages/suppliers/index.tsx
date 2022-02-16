@@ -97,7 +97,11 @@ const SupplierResult = (supplier: Supplier) => {
               )
               .join(', ')}
           </Text>
-          <Text>
+          <Text
+            style={{
+              wordBreak: 'break-word'
+            }}
+          >
             {supplier.description && supplier.description.substring(0, 150)}
             {supplier.description &&
               supplier.description.length >= 150 &&

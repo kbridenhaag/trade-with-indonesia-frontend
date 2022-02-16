@@ -167,14 +167,14 @@ export const FindImporters: NextPage<FindImportersProps> = (
                 <TableBody>
                   {data?.map((importer) => (
                     <TableRow key={`importer-result-${importer.id}`}>
-                      <TableHeader scope="row">
+                      <TableHeader scope="row" className="kbridh-!-width-one-third">
                         {importer.companyName}
                       </TableHeader>
                       <TableDataCell>
                         {importer.tags.map(({ name }) => name).join(', ')}
                       </TableDataCell>
                       <TableDataCell>
-                        <a href={importer.website}>{importer.website}</a>
+                        <a href={importer.website}>Visit website</a>
                       </TableDataCell>
                     </TableRow>
                   ))}

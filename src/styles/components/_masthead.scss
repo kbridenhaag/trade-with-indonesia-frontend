@@ -2,7 +2,6 @@
   color: govuk-colour("white");
   background-color: $batik-brand-colour;
   padding: govuk-spacing(5) 0;
-  padding-bottom: 0;
 
   @include govuk-media-query($from: desktop) {
     padding-bottom: govuk-spacing(7);
@@ -10,6 +9,8 @@
 }
 
 .app-masthead--home {
+  padding-bottom: 0;
+
   @include govuk-media-query($from: desktop) {
     padding-bottom: calc(govuk-spacing(9) + govuk-spacing(5));
   }
