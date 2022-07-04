@@ -21,7 +21,6 @@ import { Masthead } from '../../kbridh/Masthead'
 import { Select, SelectOption } from '../../kbridh/Select'
 import { Text } from '../../kbridh/Text'
 import { withMasthead } from '../../layouts/DefaultLayout'
-import { withAuth } from '../../hoc/with-auth'
 
 const FindSuppliersLayout = withMasthead(
   <Masthead>
@@ -259,4 +258,4 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
   }
 }
 
-export default withAuth(FindSuppliers)
+export default FindSuppliers

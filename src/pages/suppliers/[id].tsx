@@ -7,7 +7,6 @@ import { Masthead } from '../../kbridh/Masthead'
 import { Text } from '../../kbridh/Text'
 import { withMasthead } from '../../layouts/DefaultLayout'
 import { Button } from '../../kbridh/Button'
-import { withAuth } from '../../hoc/with-auth'
 
 interface Supplier {
   id: string
@@ -213,4 +212,4 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   }
 }
 
-export default withAuth(SupplierProfilePage)
+export default SupplierProfilePage

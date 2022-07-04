@@ -16,7 +16,6 @@ import { Masthead } from '../../kbridh/Masthead'
 import { Text } from '../../kbridh/Text'
 import { withMasthead } from '../../layouts/DefaultLayout'
 import { format } from 'date-fns'
-import { withAuth } from '../../hoc/with-auth'
 
 const PublicationsLayout = withMasthead(
   <Masthead>
@@ -242,4 +241,4 @@ export const getStaticProps: GetStaticProps = async () => {
   }
 }
 
-export default withAuth(Publications)
+export default Publications

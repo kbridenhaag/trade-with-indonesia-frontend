@@ -27,7 +27,6 @@ import {
   TableRow
 } from '../../kbridh/Table'
 import { Result } from '../../components/FilterError'
-import { withAuth } from '../../hoc/with-auth'
 
 const FindImportersLayout = withMasthead(
   <Masthead>
@@ -228,4 +227,4 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
   }
 }
 
-export default withAuth(FindImporters)
+export default FindImporters

@@ -10,7 +10,6 @@ import { Text } from '../kbridh/Text'
 import { WidthContainer } from '../kbridh/WidthContainer'
 import { withMasthead } from '../layouts/DefaultLayout'
 import kbridhBuilding from '../../public/assets/images/kbridh-building.jpg'
-import { withAuth } from '../hoc/with-auth'
 
 interface HomeProps {
   numberOfSuppliers: number
@@ -184,4 +183,4 @@ export const getStaticProps: GetStaticProps = async () => {
   }
 }
 
-export default withAuth(Home)
+export default Home
