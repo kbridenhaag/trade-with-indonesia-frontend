@@ -166,7 +166,10 @@ export const FindImporters: NextPage<FindImportersProps> = (
                 <TableBody>
                   {data?.map((importer) => (
                     <TableRow key={`importer-result-${importer.id}`}>
-                      <TableHeader scope="row" className="kbridh-!-width-one-third">
+                      <TableHeader
+                        scope="row"
+                        className="kbridh-!-width-one-third"
+                      >
                         {importer.companyName}
                       </TableHeader>
                       <TableDataCell>
